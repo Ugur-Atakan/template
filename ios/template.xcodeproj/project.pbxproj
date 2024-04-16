@@ -14,6 +14,14 @@
 		96905EF65AED1B983A6B3ABC /* libPods-template.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-template.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		57263D544DD343B28E27AF12 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC82A8BA53A49C2A09017D8 /* noop-file.swift */; };
+		9155CB970B9D4910BACEAA7D /* Avenir-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3E8E605E54A4495A0CABC29 /* Avenir-Medium.ttf */; };
+		A635C9469EA1428CB4F8C18D /* Avenir-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B629F00E3DCA45749F4D6994 /* Avenir-Heavy.ttf */; };
+		07A530B738C843ABA484A6D5 /* Avenir-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7760519D14A04BE7937F80A6 /* Avenir-Light.ttf */; };
+		7370A35256BC491D9300F25D /* Avenir-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39D56F14C1824EE48B5BDC7A /* Avenir-Black.ttf */; };
+		5443EC67049F4740B041EE81 /* Barlow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB98E173CA454F9BAB627205 /* Barlow-Regular.ttf */; };
+		3C027004EFEC48A5A8ADFBFF /* Barlow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68FEA6496F3144D3BB383DEA /* Barlow-Bold.ttf */; };
+		30D27947F24F4204B6D2CF0D /* Barlow-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 825AAF875BE9471E8970DF6B /* Barlow-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,15 @@
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-template/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		6FC82A8BA53A49C2A09017D8 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "template/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		A4E8BFD7E2AE4BA3945D2D63 /* template-Bridging-Header.h */ = {isa = PBXFileReference; name = "template-Bridging-Header.h"; path = "template/template-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		A3E8E605E54A4495A0CABC29 /* Avenir-Medium.ttf */ = {isa = PBXFileReference; name = "Avenir-Medium.ttf"; path = "../assets/fonts/Avenir-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B629F00E3DCA45749F4D6994 /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; name = "Avenir-Heavy.ttf"; path = "../assets/fonts/Avenir-Heavy.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7760519D14A04BE7937F80A6 /* Avenir-Light.ttf */ = {isa = PBXFileReference; name = "Avenir-Light.ttf"; path = "../assets/fonts/Avenir-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		39D56F14C1824EE48B5BDC7A /* Avenir-Black.ttf */ = {isa = PBXFileReference; name = "Avenir-Black.ttf"; path = "../assets/fonts/Avenir-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BB98E173CA454F9BAB627205 /* Barlow-Regular.ttf */ = {isa = PBXFileReference; name = "Barlow-Regular.ttf"; path = "../assets/fonts/Barlow-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		68FEA6496F3144D3BB383DEA /* Barlow-Bold.ttf */ = {isa = PBXFileReference; name = "Barlow-Bold.ttf"; path = "../assets/fonts/Barlow-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		825AAF875BE9471E8970DF6B /* Barlow-Medium.ttf */ = {isa = PBXFileReference; name = "Barlow-Medium.ttf"; path = "../assets/fonts/Barlow-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +71,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
+				6FC82A8BA53A49C2A09017D8 /* noop-file.swift */,
+				A4E8BFD7E2AE4BA3945D2D63 /* template-Bridging-Header.h */,
 			);
 			name = template;
 			sourceTree = "<group>";
@@ -83,6 +102,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
+				033B3FB376224749BFB85FEA /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -130,6 +150,21 @@
 			);
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
+		};
+		033B3FB376224749BFB85FEA /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				A3E8E605E54A4495A0CABC29 /* Avenir-Medium.ttf */,
+				B629F00E3DCA45749F4D6994 /* Avenir-Heavy.ttf */,
+				7760519D14A04BE7937F80A6 /* Avenir-Light.ttf */,
+				39D56F14C1824EE48B5BDC7A /* Avenir-Black.ttf */,
+				BB98E173CA454F9BAB627205 /* Barlow-Regular.ttf */,
+				68FEA6496F3144D3BB383DEA /* Barlow-Bold.ttf */,
+				825AAF875BE9471E8970DF6B /* Barlow-Medium.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -195,6 +230,14 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
+				5AE80FF6787141B18227539D /* template-Bridging-Header.h in Resources */,
+				9155CB970B9D4910BACEAA7D /* Avenir-Medium.ttf in Resources */,
+				A635C9469EA1428CB4F8C18D /* Avenir-Heavy.ttf in Resources */,
+				07A530B738C843ABA484A6D5 /* Avenir-Light.ttf in Resources */,
+				7370A35256BC491D9300F25D /* Avenir-Black.ttf in Resources */,
+				5443EC67049F4740B041EE81 /* Barlow-Regular.ttf in Resources */,
+				3C027004EFEC48A5A8ADFBFF /* Barlow-Bold.ttf in Resources */,
+				30D27947F24F4204B6D2CF0D /* Barlow-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +348,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
+				57263D544DD343B28E27AF12 /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,11 +377,14 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = org.name.template;
-				PRODUCT_NAME = template;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uguratakan.expotemplate";
+				PRODUCT_NAME = "template";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = "1";
+				SWIFT_OBJC_BRIDGING_HEADER = template/template-Bridging-Header.h;
+				CODE_SIGN_ENTITLEMENTS = template/template.entitlements;
 			};
 			name = Debug;
 		};
@@ -358,10 +405,13 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = org.name.template;
-				PRODUCT_NAME = template;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uguratakan.expotemplate";
+				PRODUCT_NAME = "template";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = "1";
+				SWIFT_OBJC_BRIDGING_HEADER = template/template-Bridging-Header.h;
+				CODE_SIGN_ENTITLEMENTS = template/template.entitlements;
 			};
 			name = Release;
 		};

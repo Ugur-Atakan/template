@@ -3,8 +3,66 @@
     "name": "template",
     "slug": "template",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "package": "com.uguratakan.expotemplate",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.uguratakan.expotemplate",
+      "usesAppleSignIn": true
+    },
+    "plugins": [
+      "expo-apple-authentication",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow App to access your camera",
+          "microphonePermission": "Allow App to access your microphone"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The App accesses your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Avenir-Medium.ttf",
+            "./assets/fonts/Avenir-Heavy.ttf",
+            "./assets/fonts/Avenir-Light.ttf",
+            "./assets/fonts/Avenir-Black.ttf",
+            "./assets/fonts/Barlow-Regular.ttf",
+            "./assets/fonts/Barlow-Bold.ttf",
+            "./assets/fonts/Barlow-Medium.ttf"
+          ]
+        }
+      ]
     ]
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-4358409932945737~5892854221",
+    "ios_app_id": "ca-app-pub-4358409932945737~3546742545"
   }
 }

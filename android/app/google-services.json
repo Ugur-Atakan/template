@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "528662554546",
+    "project_id": "rnapp-firebase0",
+    "storage_bucket": "rnapp-firebase0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528662554546:android:240ea886f4af653cd566ab",
+        "android_client_info": {
+          "package_name": "com.uguratakan.authtemplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528662554546-5i0k4v577r8uc8ei7uv9k9lq942k6nfk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uguratakan.authtemplate",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "528662554546-dkhcdgelj3kg84uriqqk4jrblsehqjvv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe4jtRAyY-wwQh3S1Id3P8EVTdA-m2K50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528662554546-dkhcdgelj3kg84uriqqk4jrblsehqjvv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "528662554546-airngrul4kptmg098lijg8c2rhpoqe8e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.uguratakan.authtemplate"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528662554546:android:75219cceefbd161dd566ab",
+        "android_client_info": {
+          "package_name": "com.uguratakan.expotemplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528662554546-dkhcdgelj3kg84uriqqk4jrblsehqjvv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe4jtRAyY-wwQh3S1Id3P8EVTdA-m2K50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528662554546-dkhcdgelj3kg84uriqqk4jrblsehqjvv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "528662554546-airngrul4kptmg098lijg8c2rhpoqe8e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.uguratakan.authtemplate"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
