@@ -1,0 +1,129 @@
+package com.backgroundstepcounter.services
+
+import android.app.AlarmManager
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.app.Service
+import android.content.Context
+import android.content.Intent
+import android.content.pm.ServiceInfo
+import android.os.Build
+import android.os.IBinder
+import android.os.SystemClock
+import android.provider.Settings
+import android.widget.Toast
+import androidx.core.app.NotificationCompat
+import com.stepcounting.MainActivity
+
+class BackgroundService : Service() {
+    companion object {
+        const val CHANNEL_ID = "sc_background_service_channel"
+        const val NOTIFICATION_ID = 1
+    }
+
+    private lateinit var notificationIntent: Intent
+
+    override fun onCreate() {
+        super.onCreate()
+        notificationIntent = Intent(this, MainActivity::class.java)
+        createNotificationChannel()
+    }
+
+    override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
+        if (intent.action == "ACTION_STOP_SERVICE") {
+            stopSelf()
+            return START_NOT_STICKY
+        }
+        if (Build.VERSION.SDK_INT >= 34) {
+            startForeground(
+                    NOTIFICATION_ID,
+                    getNotification(),
+                    ServiceInfo.FOREGROUND_SERVICE_TYPE_HEALTH);
+        }else {
+            startForeground(
+                    NOTIFICATION_ID,
+                    getNotification());
+        }
+        return START_STICKY
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+       // stopForeground(true)
+        stopForeground(STOP_FOREGROUND_REMOVE)
+    }
+
+    override fun onTaskRemoved(rootIntent: Intent?) {
+        super.onTaskRemoved(rootIntent)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            if (getSystemService(AlarmManager::class.java).canScheduleExactAlarms()) {
+                scheduleRestart()
+            } else {
+                val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+                Toast.makeText(this, "Please allow the app to schedule exact alarms for continuous operation.", Toast.LENGTH_LONG).show()
+            }
+        } else {
+            scheduleRestart()
+        }
+    }
+
+    private fun scheduleRestart() {
+        val restartServiceIntent = Intent(applicationContext, this::class.java).also {
+            it.setPackage(packageName)
+        }
+        val restartServicePendingIntent: PendingIntent = PendingIntent.getService(
+                this, 1, restartServiceIntent,
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+                } else {
+                    PendingIntent.FLAG_UPDATE_CURRENT
+                }
+        )
+
+        val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        alarmManager.setExact(
+                AlarmManager.ELAPSED_REALTIME,
+                SystemClock.elapsedRealtime() + 1000,
+                restartServicePendingIntent
+        )
+    }
+
+    override fun onBind(intent: Intent): IBinder? {
+        return null
+    }
+
+    private fun getNotification(): Notification {
+        val stopIntent = Intent(this, BackgroundService::class.java)
+        stopIntent.action = "ACTION_STOP_SERVICE"
+        val stopPendingIntent = PendingIntent.getService(
+                this, 0, stopIntent,PendingIntent.FLAG_IMMUTABLE
+        )
+
+        return NotificationCompat.Builder(this, CHANNEL_ID)
+                .setContentTitle("Step Counter is running")
+                .setContentText("Tracking your steps")
+                .setSmallIcon(androidx.appcompat.R.drawable.abc_ic_menu_overflow_material)
+                .setContentIntent(PendingIntent.getActivity(this, 0, notificationIntent,PendingIntent.FLAG_IMMUTABLE))
+                .addAction(android.R.drawable.ic_media_pause, "Stop", stopPendingIntent)
+                .build()
+    }
+
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channel = NotificationChannel(
+                    CHANNEL_ID,
+                    "Step Counter Service Channel",
+                    NotificationManager.IMPORTANCE_LOW
+            ).apply {
+                description = "This channel is used by step counter service"
+            }
+            val notificationManager = getSystemService(NotificationManager::class.java)
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
+}

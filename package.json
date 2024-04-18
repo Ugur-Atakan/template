@@ -1,7 +1,8 @@
 {
   "name": "react-native-background-step-counter",
   "version": "0.1.0",
-  "description": "aaa",
+  "summary": "It is a multi-platform library that combines CoreMotionSensor from iOS with SensorEventListener from Android.",
+  "description": "This library provides an interface for tracking the number of steps taken by the user in a React Native app.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -35,9 +36,22 @@
     "release": "release-it"
   },
   "keywords": [
-    "react-native",
+    "activity-recognition-api",
+    "activity-recognition",
+    "android",
+    "core-motion",
     "ios",
-    "android"
+    "motion-sensor-api",
+    "motion-sensor",
+    "pedometer-api",
+    "pedometer",
+    "react-native-step-counter",
+    "react-native",
+    "sensor-manager",
+    "step-counter-api",
+    "step-counter",
+    "step-detection-api",
+    "step-detection"
   ],
   "repository": {
     "type": "git",
