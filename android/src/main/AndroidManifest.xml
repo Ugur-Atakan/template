@@ -1,7 +1,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.backgroundstepcounter">
   <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
-  <uses-permission android:name="android.permission.BODY_SENSORS_BACKGROUND" />
+  <uses-permission android:name="android.permission.BODY_SENSORS"/>
+  <uses-permission android:name="android.permission.BODY_SENSORS_BACKGROUND"/>
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+
+   <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE_HEALTH"
+        android:minSdkVersion="33" />
 
   <uses-feature
     android:name="android.hardware.sensor.stepcounter"
@@ -9,4 +17,10 @@
   <uses-feature
     android:name="android.hardware.sensor.accelerometer"
     android:required="true" />
+        <service
+           android:name=".services.BackgroundService"
+            android:exported="false"
+            android:foregroundServiceType="health"
+            >
+        </service>
 </manifest>
